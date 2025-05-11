@@ -1,8 +1,9 @@
 "use client";
 
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import NavigaionMenu from "./_misc/navigation";
+
 const CustomFonts = localFont({
   src: [
     {
@@ -48,7 +49,10 @@ export default function RootLayout({
       <head>
         <title>Zun - Portfolio</title>
       </head>
-      <body className={`${CustomFonts.className} antialiased`}>{children}</body>
+      <body className={`${CustomFonts.className} antialiased`}>
+        <NavigaionMenu />
+        {children}
+      </body>
     </html>
   );
 }
