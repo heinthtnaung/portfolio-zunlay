@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { motion, AnimatePresence } from "motion/react";
 import { usePathname } from "next/navigation";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const CustomFonts = localFont({
   src: [
@@ -73,6 +74,7 @@ export default function RootLayout({
           </motion.div>
         </AnimatePresence>
       </body>
+      <GoogleAnalytics gaId="G-EWL87LSBYL" />
     </html>
   );
 }
