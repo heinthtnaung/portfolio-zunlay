@@ -55,7 +55,7 @@ export default function WhatToDoPage() {
             </motion.ul>
             <SubTitle
               text="Social Media Marketing"
-              className="text-pink-400 mb-4 lg:mt-12 md:mt-4"
+              className="text-pink-400 mb-4 lg:mt-12 mt-4"
             />
             <motion.ul
               className="list-disc space-y-4 pl-6 text-base/8"
