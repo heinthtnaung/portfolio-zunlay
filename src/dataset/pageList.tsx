@@ -23,10 +23,10 @@ export const PageList = [
     path: "/specialskills",
     title: "Special Skills",
   },
-  {
-    path: "/skills",
-    title: "Skills",
-  },
+  // {
+  //   path: "/skills",
+  //   title: "Skills",
+  // },
   {
     path: "/whaticangiveyou",
     title: "What I can give you?",

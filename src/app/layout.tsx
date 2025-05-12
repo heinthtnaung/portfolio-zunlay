@@ -3,6 +3,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import NavigaionMenu from "./_misc/navigation";
+import { motion, AnimatePresence } from "motion/react";
+import { usePathname } from "next/navigation";
 
 const CustomFonts = localFont({
   src: [
@@ -44,14 +46,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const currentPath = usePathname();
+
   return (
     <html lang="en">
       <head>
         <title>Zun - Portfolio</title>
       </head>
-      <body className={`${CustomFonts.className} antialiased`}>
+      <body className={`${CustomFonts.className} antialiased bg-white`}>
         <NavigaionMenu />
-        {children}
+        <AnimatePresence mode="wait">
+          <motion.div key={currentPath}>
+            <motion.div
+              className="fixed z-10 top-0 left-0 w-full h-full gradient-background origin-bottom"
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 1 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            />
+            <motion.div
+              className="fixed z-10 top-0 left-0 w-full h-full bg-[#EF778F] origin-top"
+              initial={{ scaleY: 1 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 1 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            />
+            {children}
+          </motion.div>
+        </AnimatePresence>
       </body>
     </html>
   );

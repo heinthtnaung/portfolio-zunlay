@@ -1,8 +1,8 @@
-import { SubTitle, Title } from "@/components/Typography";
+import { Title } from "@/components/Typography";
 
 export default function SaymorePage() {
   return (
-    <div className="w-screen min-h-screen justify-center bg-white flex items-center overflow-auto">
+    <div className="w-screen h-screen justify-center bg-white lg:flex items-center overflow-auto p-8">
       <div className="container mx-auto grid grid-cols-1 gap-4 items-center">
         <Title
           text="What I want to say more?"

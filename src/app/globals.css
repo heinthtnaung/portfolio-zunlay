@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f9e7e5;
     --foreground: #ededed;
   }
 }
@@ -26,7 +26,7 @@ body {
 }
 
 .gradient-background {
-  background: linear-gradient(161deg,#f6a0ab,#CFABE4,#EF778F,#ccb1e2);
+  background: linear-gradient(161deg, #f6a0ab, #cfabe4, #ef778f, #ccb1e2);
   background-size: 240% 240%;
   animation: gradient-animation 10s ease infinite;
 }
