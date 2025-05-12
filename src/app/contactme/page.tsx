@@ -21,12 +21,12 @@ export default function ContactMePage() {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 items-center lg:px-20 px-8 ">
           <div>
             <SubTitle text="Phone " className="text-pink-400 mb-4 md:mt-4" />
-            <p className="text-black">(+65) 98000538</p>
+            <p className="text-black text-lg">(+65) 98000538</p>
           </div>
           <div>
             <SubTitle text="Email " className="text-pink-400 mb-4 md:mt-4" />
             <p className="text-black">
-              <a href="mailto:zunlaynwe6@gmail.com">zunlaynwe6@gmail.com</a>
+              <a href="mailto:zunlaynwe6@gmail.com" className="text-lg">zunlaynwe6@gmail.com</a>
             </p>
           </div>
         </div>
