@@ -1,50 +1,98 @@
+"use client";
+import { motion } from "motion/react";
+
 import { SubTitle, Title } from "@/components/Typography";
+import PageTransition from "@/components/Transition/pageTransition";
+
+// Dataset
+import { clientSupplier, events } from "@/dataset/whatido";
 
 export default function WhatToDoPage() {
   return (
-    <div className="w-screen h-screen bg-white text-black flex items-center">
-      <div className="container mx-auto grid xl:grid-cols-2 md-grid-cols-1 gap-4 items-center">
-        <div className="h-full grid">
-          <Title text="What I Do?" className="text-pink-400" />
-          <div className="grid items-baseline">
-            <div>
-              <SubTitle text="Events" className="text-pink-400 mb-4 md:mt-4" />
-              <ul className="list-disc pl-6 text-base/8">
-                <li>Pre-Event Planning </li>
-                <li>Monitor the design </li>
-                <li>Event Execution </li>
-                <li>Catering</li>
-                <li>Assign teams members</li>
-              </ul>
+    <PageTransition>
+      <div className="w-screen h-screen bg-white text-black lg:flex items-center overflow-auto p-8">
+        <div className="container mx-auto grid xl:grid-cols-2 md-grid-cols-1 gap-4 items-center lg:pt-0 pt-20">
+          <div className="h-full grid items-baseline">
+            <Title text="What I Do?" className="text-pink-400" />
+            <div className="grid h-full items-end">
+              <div>
+                <SubTitle
+                  text="Events"
+                  className="text-pink-400 mb-4 md:mt-4"
+                />
+                <motion.ul
+                  className="list-disc space-y-4 pl-6 text-base/8"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visiable"
+                >
+                  {events.map((e, idx) => (
+                    <motion.li key={`events-` + idx} variants={itemVariants}>
+                      {e}
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="xl:pl-34">
-          <SubTitle
-            text="Client and Supplier Management"
-            className="text-pink-400 mb-4 md:mt-4"
-          />
-          <ul className="list-disc pl-6 text-base/8 xl:mb-16 mb-8">
-            <li>Client onboarding </li>
-            <li>Samples and Service Management</li>
-            <li>Contracts and Agreement Handling </li>
-            <li>Manage reply</li>
-            <li>Building relationships with both clients and suppliers</li>
-            <li>Order and Samples Process </li>
-          </ul>
-          <SubTitle
-            text="Social Media Marketing"
-            className="text-pink-400  mb-4"
-          />
-          <ul className="list-disc pl-6 text-base/8">
-            <li>Photographing </li>
-            <li>Create content </li>
-            <li>Boosting </li>
-            <li>Website Analysis</li>
-          </ul>
+          <div className="xl:pl-34">
+            <SubTitle
+              text="Client and Supplier Management"
+              className="text-pink-400 mb-4 md:mt-4"
+            />
+            <motion.ul
+              className="list-disc space-y-4 pl-6 text-base/8"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visiable"
+            >
+              {clientSupplier.map((e, idx) => (
+                <motion.li key={`events-` + idx} variants={itemVariants}>
+                  {e}
+                </motion.li>
+              ))}
+            </motion.ul>
+            <SubTitle
+              text="Social Media Marketing"
+              className="text-pink-400 mb-4 lg:mt-12 md:mt-4"
+            />
+            <motion.ul
+              className="list-disc space-y-4 pl-6 text-base/8"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visiable"
+            >
+              {clientSupplier.map((e, idx) => (
+                <motion.li key={`events-` + idx} variants={itemVariants}>
+                  {e}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </div>
         </div>
       </div>
-    </div>
+    </PageTransition>
   );
 }
+
+/** Animation */
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visiable: {
+    opacity: 1,
+    transition: { staggerChildren: 0.5 },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visiable: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.3 },
+  },
+};
