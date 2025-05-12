@@ -10,7 +10,7 @@ import { clientSupplier, events } from "@/dataset/whatido";
 export default function WhatToDoPage() {
   return (
     <PageTransition>
-      <div className="w-screen h-screen bg-white text-black lg:flex items-center overflow-auto p-8">
+      <div className="w-full lg:py-28 bg-white text-black lg:flex items-center overflow-auto p-8">
         <div className="lg:container mx-auto grid xl:grid-cols-2 grid-cols-1 gap-4 items-center lg:pt-0 pt-20">
           <div className="h-full grid items-baseline">
             <Title text="What I Do?" className="text-pink-400" />
@@ -24,7 +24,7 @@ export default function WhatToDoPage() {
                   className="list-disc space-y-4 pl-6 text-lg text-lg-base/8"
                   variants={containerVariants}
                   initial="hidden"
-                  animate="visiable"
+                  whileInView="visiable"
                 >
                   {events.map((e, idx) => (
                     <motion.li key={`events-` + idx} variants={itemVariants}>
@@ -45,7 +45,7 @@ export default function WhatToDoPage() {
               className="list-disc space-y-4 pl-6 text-lg text-lg-base/8 "
               variants={containerVariants}
               initial="hidden"
-              animate="visiable"
+              whileInView="visiable"
             >
               {clientSupplier.map((e, idx) => (
                 <motion.li key={`events-` + idx} variants={itemVariants}>
@@ -61,7 +61,7 @@ export default function WhatToDoPage() {
               className="list-disc space-y-4 pl-6  text-lg text-lg-base/8 "
               variants={containerVariants}
               initial="hidden"
-              animate="visiable"
+              whileInView="visiable"
             >
               {clientSupplier.map((e, idx) => (
                 <motion.li key={`events-` + idx} variants={itemVariants}>

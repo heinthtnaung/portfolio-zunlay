@@ -6,9 +6,9 @@ import { SubTitle, Title } from "@/components/Typography";
 export default function ContactMePage() {
   return (
     <PageTransition>
-      <div className="w-screen h-screen grid items-start justify-center bg-white overflow-auto">
+      <div className="w-full lg:pb-28 grid items-start justify-center bg-white overflow-hidden">
         <div className="min-h-2/3 flex gradient-background w-screen items-end justify-start lg:px-20 pb-20 pt-24 px-8">
-          <div>
+          <div className="lg:container mx-auto ">
             <Title
               text="Looking forward to hearing from you!"
               className="lg:max-w-5xl mb-10"
@@ -18,7 +18,7 @@ export default function ContactMePage() {
             </p>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 items-center lg:px-20 px-8 ">
+        <div className="lg:container w-full lg:px-0 p-10 mx-auto grid lg:grid-cols-3 grid-cols-1 gap-4 items-center ">
           <div>
             <SubTitle text="Phone " className="text-pink-400 mb-4 md:mt-4" />
             <p className="text-black text-lg">(+65) 98000538</p>

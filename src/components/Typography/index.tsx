@@ -1,9 +1,11 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
 
 export function Title(props: { text: string; className?: string }) {
   const { text, className } = props;
+
   return (
     <div
       className={`md:text-7xl text-5xl font-black ${
@@ -14,7 +16,7 @@ export function Title(props: { text: string; className?: string }) {
         <motion.span
           key={`${t + idx}`}
           initial={{ opacity: 0, bottom: "-50px", position: "relative" }}
-          animate={{ opacity: 1, bottom: "0px" }}
+          whileInView={{ opacity: 1, bottom: "0px" }}
           transition={{
             duration: 0.2,
             delay: 0.05 * idx,
@@ -34,10 +36,14 @@ export function SubTitle(props: { text: string; className?: string }) {
       className={`w-full md:text-2xl text-xl font-black ${className}`}
       variants={containerVariants}
       initial="hidden"
-      animate="visiable"
+      whileInView="visiable"
     >
       {text.split(" ").map((t, idx) => (
-        <motion.div className="pr-2 inline-block" key={`${t + idx}`} variants={itemVariants}>
+        <motion.div
+          className="pr-2 inline-block"
+          key={`${t + idx}`}
+          variants={itemVariants}
+        >
           {t + " "}
         </motion.div>
       ))}

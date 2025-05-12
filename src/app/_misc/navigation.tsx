@@ -45,7 +45,7 @@ export default function NavigaionMenu() {
             <motion.div
               className="mt-4 cursor-pointer px-2 py-8 rounded-2xl  bg-[#eadfff]/40 backdrop-blur-xl "
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               exit={{ opacity: 0 }}
             >

@@ -5,9 +5,9 @@ import { Title } from "@/components/Typography";
 // Dataset
 import { SkillList } from "@/dataset/skills";
 
-export default function EventsPage() {
+export default function SpeicalSkillsPage() {
   return (
-    <div className="w-screen h-screen justify-center bg-white lg:flex items-center overflow-auto p-8">
+    <div className="w-full lg:py-28 justify-center bg-white lg:flex items-center overflow-auto p-8">
       <div className="lg:container mx-auto grid grid-cols-1 gap-4 items-center text-black lg:pt-0 pt-20">
         <Title text="Special Skills" className="mb-20" />
         <div className="lg:container mx-auto grid lg:grid-cols-3 gap-4 items-start text-black">

@@ -2,7 +2,7 @@ import { SubTitle, Title } from "@/components/Typography";
 
 export default function WhatICanGiveYouPage() {
   return (
-    <div className="bg-[#f9e7e5]w-screen h-screen overflow-auto lg:flex items-center p-8">
+    <div className="bg-[#f9e7e5] w-full lg:py-28 overflow-auto lg:flex items-center p-8">
       <div className="lg:container mx-auto grid grid-cols-1 gap-4 lg:flex justify-center items-start text-black lg:pt-0 pt-20">
         <div className="h-full grid pt-0 ">
           <Title text="What I can give you?" className="text-pink-400" />
