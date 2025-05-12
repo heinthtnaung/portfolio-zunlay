@@ -11,7 +11,7 @@ export default function WhatToDoPage() {
   return (
     <PageTransition>
       <div className="w-screen h-screen bg-white text-black lg:flex items-center overflow-auto p-8">
-        <div className="container mx-auto grid xl:grid-cols-2 md-grid-cols-1 gap-4 items-center lg:pt-0 pt-20">
+        <div className="lg:container mx-auto grid xl:grid-cols-2 grid-cols-1 gap-4 items-center lg:pt-0 pt-20">
           <div className="h-full grid items-baseline">
             <Title text="What I Do?" className="text-pink-400" />
             <div className="grid h-full items-end">
@@ -55,7 +55,7 @@ export default function WhatToDoPage() {
             </motion.ul>
             <SubTitle
               text="Social Media Marketing"
-              className="text-pink-400 mb-4 lg:mt-12 md:mt-4"
+              className="text-pink-400 mb-4 lg:mt-12 mt-4"
             />
             <motion.ul
               className="list-disc space-y-4 pl-6 text-base/8"

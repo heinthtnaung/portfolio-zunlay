@@ -6,7 +6,7 @@ export function Title(props: { text: string; className?: string }) {
   const { text, className } = props;
   return (
     <div
-      className={`text-7xl sm:text-5xl xs:text-5xl font-black ${
+      className={`md:text-7xl text-5xl font-black ${
         className ?? ""
       } relative overflow-hidden`}
     >
@@ -31,17 +31,13 @@ export function SubTitle(props: { text: string; className?: string }) {
   const { text, className } = props;
   return (
     <motion.div
-      className={`text-2xl font-black flex overflow-hidden ${className}`}
+      className={`w-full md:text-2xl text-xl font-black ${className}`}
       variants={containerVariants}
       initial="hidden"
       animate="visiable"
     >
       {text.split(" ").map((t, idx) => (
-        <motion.div
-          className=" relative pr-2"
-          key={`${t + idx}`}
-          variants={itemVariants}
-        >
+        <motion.div className="pr-2 inline-block" key={`${t + idx}`} variants={itemVariants}>
           {t + " "}
         </motion.div>
       ))}
