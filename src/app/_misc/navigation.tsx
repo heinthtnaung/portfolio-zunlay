@@ -59,7 +59,7 @@ export default function NavigaionMenu() {
                     ${
                       pathname === pl.path
                         ? " bg-pink-400 rounded-full"
-                        : " text-zinc-600 mix-blend-difference"
+                        : " text-zinc-800"
                     }`}
                       >
                         {pl.title}

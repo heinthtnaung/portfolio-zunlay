@@ -11,7 +11,7 @@ export default function WhatToDoPage() {
   return (
     <PageTransition>
       <div className="w-screen h-screen bg-white text-black lg:flex items-center overflow-auto p-8">
-        <div className="container mx-auto grid xl:grid-cols-2 md-grid-cols-1 gap-4 items-center lg:pt-0 pt-20">
+        <div className="lg:container mx-auto grid xl:grid-cols-2 grid-cols-1 gap-4 items-center lg:pt-0 pt-20">
           <div className="h-full grid items-baseline">
             <Title text="What I Do?" className="text-pink-400" />
             <div className="grid h-full items-end">

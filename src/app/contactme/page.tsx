@@ -7,7 +7,7 @@ export default function ContactMePage() {
   return (
     <PageTransition>
       <div className="w-screen h-screen grid items-start justify-center bg-white overflow-auto">
-        <div className="min-h-2/3 flex gradient-background w-screen items-end justify-start lg:px-20 lg:pb-20 pt-20 px-8">
+        <div className="min-h-2/3 flex gradient-background w-screen items-end justify-start lg:px-20 pb-20 pt-24 px-8">
           <div>
             <Title
               text="Looking forward to hearing from you!"
@@ -18,7 +18,7 @@ export default function ContactMePage() {
             </p>
           </div>
         </div>
-        <div className="grid xl:grid-cols-3 grid-cols-2 gap-4 items-center lg:px-20 px-4 ">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 items-center lg:px-20 px-8 ">
           <div>
             <SubTitle text="Phone " className="text-pink-400 mb-4 md:mt-4" />
             <p className="text-black">(+65) 98000538</p>
