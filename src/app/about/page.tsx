@@ -2,11 +2,12 @@
 
 import PageTransition from "@/components/Transition/pageTransition";
 import { Title } from "@/components/Typography";
+import { motion } from "motion/react";
 
 export default function AboutPage() {
   return (
     <PageTransition>
-      <div className="w-screen h-screen bg-[#f9e7e5] text-black lg:flex items-center p-8 overflow-auto">
+      <div className="w-full lg:py-28 bg-[#f9e7e5] text-black lg:flex items-center p-8 overflow-auto">
         <div className="lg:container lg:grid-cols-2 lg:pt-0 md:grid-cols-1 mx-auto grid  gap-4 items-center pt-20">
           <div className="h-full grid">
             <Title text="Who Am I?" className="text-pink-400" />
@@ -20,7 +21,16 @@ export default function AboutPage() {
           </div>
           <div>
             <picture>
-              <img src={"/photo.png"} alt="profilePhoto" />
+              <motion.img
+                src={"/photo.png"}
+                alt="profilePhoto"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: 1,
+                }}
+              />
             </picture>
           </div>
         </div>

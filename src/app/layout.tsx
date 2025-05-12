@@ -54,7 +54,7 @@ export default function RootLayout({
         <title>Zun - Portfolio</title>
       </head>
       <body className={`${CustomFonts.className} antialiased bg-white`}>
-        <NavigaionMenu />
+        {/* <NavigaionMenu /> */}
         <AnimatePresence mode="wait">
           <motion.div key={currentPath}>
             <motion.div
