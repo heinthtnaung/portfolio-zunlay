@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
 
 export function Title(props: { text: string; className?: string }) {
   const { text, className } = props;

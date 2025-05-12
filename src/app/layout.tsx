@@ -2,7 +2,6 @@
 
 import localFont from "next/font/local";
 import "./globals.css";
-import NavigaionMenu from "./_misc/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { usePathname } from "next/navigation";
 
@@ -54,7 +53,6 @@ export default function RootLayout({
         <title>Zun - Portfolio</title>
       </head>
       <body className={`${CustomFonts.className} antialiased bg-white`}>
-        {/* <NavigaionMenu /> */}
         <AnimatePresence mode="wait">
           <motion.div key={currentPath}>
             <motion.div
