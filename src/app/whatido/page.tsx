@@ -21,7 +21,7 @@ export default function WhatToDoPage() {
                   className="text-pink-400 mb-4 md:mt-4"
                 />
                 <motion.ul
-                  className="list-disc space-y-4 pl-6 text-base/8"
+                  className="list-disc space-y-4 pl-6 text-lg text-lg-base/8"
                   variants={containerVariants}
                   initial="hidden"
                   animate="visiable"
@@ -42,7 +42,7 @@ export default function WhatToDoPage() {
               className="text-pink-400 mb-4 md:mt-4"
             />
             <motion.ul
-              className="list-disc space-y-4 pl-6 text-base/8"
+              className="list-disc space-y-4 pl-6 text-lg text-lg-base/8 "
               variants={containerVariants}
               initial="hidden"
               animate="visiable"
@@ -58,7 +58,7 @@ export default function WhatToDoPage() {
               className="text-pink-400 mb-4 lg:mt-12 mt-4"
             />
             <motion.ul
-              className="list-disc space-y-4 pl-6 text-base/8"
+              className="list-disc space-y-4 pl-6  text-lg text-lg-base/8 "
               variants={containerVariants}
               initial="hidden"
               animate="visiable"

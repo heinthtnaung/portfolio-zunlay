@@ -10,7 +10,7 @@ export function SimpleCard(props: {
   const { imagePath, title, description } = props;
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-[380px] mx-auto ">
       <picture>
         <img
           src={imagePath}
@@ -19,8 +19,8 @@ export function SimpleCard(props: {
         />
       </picture>
 
-      <SubTitle text={title} className="py-4" />
-      <div className="pb-4"> {description} </div>
+      <SubTitle text={title} className="py-4 text-center" />
+      <div className="pb-4 text-lg"> {description} </div>
     </div>
   );
 }
